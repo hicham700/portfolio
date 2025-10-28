@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+/* ----- Section Title ----- */
+.title {
+    text-align: center;
+    margin: 6rem 0 4rem;
+    margin-top: 100px;
+}
+
+.title h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.title span {
+    color: var(--main-color);
+}
+
+/* ----- Project Grid ----- */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 10%;
+}
+
+.project-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+}
+
+.project-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: block;
+    transition: 0.5s ease;
+}
+
+/* ----- Hover Overlay ----- */
+.project-layer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--main-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+    opacity: 0;
+    transition: 0.5s ease;
+    padding: 0 2rem;
+}
+
+.project-layer h4 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-layer p {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ----- Hover Effects ----- */
+.project-box:hover img {
+    transform: scale(1.1);
+    filter: blur(2px);
+}
+
+.project-box:hover .project-layer {
+    opacity: 1;
+}
+
+/* ----- Icon Button ----- */
+.project-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: #fff;
+    border-radius: 50%;
+    color: black;
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+
+.project-layer a:hover {
+    transform: scale(1.1);
+    background: var(--main-color);
+    color: black;
+}

@@ -1,0 +1,164 @@
+/* Importer la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Variables globales */
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+/* Corps du site */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* ---------------- HEADER ---------------- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+/* ---------------- SECTION CONTACT ---------------- */
+section {
+    padding: 10rem 9% 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Formulaire */
+.contact-form {
+    max-width: 700px;
+    width: 100%;
+    background: var(--second-bg-color);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-form:hover {
+    transform: scale(1.02);
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    gap: 1.2rem;
+}
+
+.input-box input {
+    flex: 1;
+    padding: 1.2rem;
+    background: #2c3340;
+    border-radius: 0.8rem;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border: 2px solid var(--main-color);
+    background: #252a33;
+}
+
+textarea {
+    width: 100%;
+    padding: 1.2rem;
+    background: #2c3340;
+    border-radius: 0.8rem;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    border: 2px solid var(--main-color);
+    background: #252a33;
+}
+
+/* Bouton */
+.btn {
+    background: var(--main-color);
+    color: var(--bg-color);
+    padding: 1.2rem 3rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00c2c2;
+    transform: scale(1.05);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    .input-box {
+        flex-direction: column;
+    }
+
+    .input-box input {
+        width: 100%;
+    }
+}
