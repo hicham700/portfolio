@@ -31,6 +31,7 @@ body {
     color: var(--text-color);
 }
 
+/* ----- HEADER ----- */
 .header {
     position: fixed;
     top: 0;
@@ -45,7 +46,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-
 .logo {
     font-size: 2.5rem;
     color: var(--text-color);
@@ -58,7 +58,7 @@ body {
     color: var(--text-color);
     margin-left: 4rem;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .navbar a:hover {
@@ -92,7 +92,7 @@ body {
     padding: 0 9%;
 }
 
-/* ----- Style commun aux cartes ----- */
+/* ----- Cartes ----- */
 .carts div {
     background: var(--second-bg-color);
     border-radius: 1.5rem;
@@ -101,21 +101,41 @@ body {
     text-align: center;
     transition: 0.3s ease;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+    /* 🔥 Ajout essentiel pour aligner les boutons */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+
+/* Effet neon glow */
 .carts div:hover {
     transform: translateY(-1rem);
     box-shadow: 0 0 2rem var(--main-color);
 }
 
-/* ----- Titres des cartes ----- */
+/* Icônes */
+.carts i {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    transition: 0.3s ease;
+}
+
+.carts div:hover i {
+    transform: scale(1.2);
+}
+
+/* Titres des cartes */
 .carts h1 {
     font-size: 2.2rem;
     color: var(--main-color);
     margin-bottom: 1rem;
 }
 
-/* ----- Paragraphe des cartes ----- */
+/* Paragraphe des cartes */
 .carts p {
     font-size: 1.5rem;
     color: #ccc;
